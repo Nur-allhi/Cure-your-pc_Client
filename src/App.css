@@ -1,3 +1,37 @@
-/* .App {
-  background-color: #c9981e;
-} */
+.heading-container {
+  text-align: center;
+}
+.heading-container p {
+  font-size: 20px;
+}
+.heading {
+  font-size: 40px;
+  font-weight: 500;
+  color: #1c3e81;
+}
+
+.card-title {
+  font-size: 25px;
+  font-weight: 500;
+  color: #1c3e81;
+}
+.card-desription {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.card-button {
+  margin: 20px 0;
+  width: 150px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  height: 30px;
+  color: white;
+  background-color: #0a81ab;
+}
+
+.card-button:hover {
+  background-color: #1c3e81;
+}

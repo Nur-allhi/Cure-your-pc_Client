@@ -1,23 +1,23 @@
-.service-card {
+.reason-card {
   display: flex;
   padding: 10px;
-  width: 400px;
+  width: 300px;
   background-color: rgb(255, 255, 255);
   text-align: center;
   border-radius: 15px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
-
-.service-card img {
-  height: 300px;
+.reason-card img {
+  height: 200px;
 }
 
 @media (max-width: 768px) {
-  .service-card {
+  .reason-card {
     width: 300px;
     margin-bottom: 20px;
   }
-  .service-card img {
+  .reason-card img {
     height: 200px;
   }
 }

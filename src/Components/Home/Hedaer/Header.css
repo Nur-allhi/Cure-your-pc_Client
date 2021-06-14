@@ -5,7 +5,7 @@
   align-items: center;
   background-color: white;
   border-radius: 10px;
-  /* width: 100vw; */
+  margin-bottom: 20px;
 }
 
 .div-container img {
@@ -34,56 +34,6 @@
 }
 .div-container button:hover {
   background-color: #1c3e81;
-}
-.imageContainer {
-  position: relative;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* background: rgba(0, 0, 0, 0.493); */
-  transition: background 0.5s ease;
-}
-
-.imageContainer:hover .overlay {
-  display: block;
-  background: rgba(0, 0, 0, 0.582);
-}
-
-.title {
-  position: absolute;
-  width: 800px;
-  left: 0;
-  top: 120px;
-  font-weight: 700;
-  font-size: 50px;
-  text-align: center;
-  text-transform: uppercase;
-  color: rgb(253, 253, 253);
-  z-index: 1;
-  transition: top 0.5s ease;
-}
-
-.imageContainer:hover .title {
-  top: 50px;
-  color: rgb(113, 174, 189);
-}
-
-.button a {
-  width: 200px;
-  padding: 12px 48px;
-  text-align: center;
-  color: white;
-  border: solid 2px white;
-  z-index: 1;
-}
-
-.imageContainer:hover .button {
-  opacity: 1;
 }
 
 @media (max-width: 768px) {

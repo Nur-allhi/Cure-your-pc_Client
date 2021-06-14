@@ -1,3 +1,6 @@
+.navBar-logo {
+  margin-left: 30px;
+}
 .nav-elements {
   display: flex;
   justify-content: flex-end;

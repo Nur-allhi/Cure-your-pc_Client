@@ -32,10 +32,19 @@ const services = [
 ];
 const Services = () => {
   return (
-    <div className="service-cards">
-      {services.map((data) => (
-        <ServiceCard key={data.id} service={data}></ServiceCard>
-      ))}
+    <div>
+      <div className="heading-container">
+        <span className="heading">What We Offer</span>
+        <p>
+          We provide various computer repair services and solutions for our new
+          and regular customers. Feel free to find out more below.
+        </p>
+      </div>
+      <div className="service-cards">
+        {services.map((data) => (
+          <ServiceCard key={data.id} service={data}></ServiceCard>
+        ))}
+      </div>
     </div>
   );
 };

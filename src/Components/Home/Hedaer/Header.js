@@ -1,6 +1,5 @@
 import React from "react";
 import "./Header.css";
-import image5 from "../../../img/imag5.jpg";
 import image1 from "../../../img/img1.jpg";
 
 const Header = () => {
@@ -19,10 +18,6 @@ const Header = () => {
       </div>
       <div className="imageContainer">
         <img src={image1} alt="" />
-        {/* <p className="title">
-          Successfully Providing <br /> the Best Computer Services last 3 years
-        </p> */}
-        {/* <div className="overlay"></div> */}
       </div>
     </div>
   );

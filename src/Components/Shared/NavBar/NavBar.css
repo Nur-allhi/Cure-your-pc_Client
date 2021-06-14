@@ -1,0 +1,31 @@
+.nav-elements {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 50px;
+}
+.nav-elements li {
+  font-weight: 600;
+  margin-right: 30px;
+  list-style: none;
+  color: white;
+  background-color: #0a81ab;
+  border-radius: 8px;
+  padding: 5px 0.9em;
+}
+.nav-elements li:hover {
+  background-color: #1c3e81;
+  border-radius: 8px;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .nav-elements {
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-right: 0px;
+  }
+  .nav-elements li {
+    margin-top: 10px;
+    margin-right: 0px;
+  }
+}

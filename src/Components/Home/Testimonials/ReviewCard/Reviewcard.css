@@ -1,0 +1,21 @@
+.review-card {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  text-align: center;
+  margin: 10px;
+  width: 250px;
+  border-radius: 10px;
+  background-color: rgb(247, 243, 243);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+.avatar-img {
+  padding: 10px;
+}
+.avatar-img img {
+  height: 200px;
+}
+.review-card-name {
+  font-size: 20px;
+  font-weight: 500;
+}

@@ -27,3 +27,9 @@
 1. Package section builded.
 2. Mobile Responsive
 3. Footer builded.
+
+## Version 0.4
+
+#### Changelog
+
+1. Reviews Added.

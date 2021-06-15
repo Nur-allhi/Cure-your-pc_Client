@@ -19,3 +19,11 @@
 1. Why choose us card builed.
 2. favicon change
 3. Mobile Responsive
+
+## Version 0.3
+
+#### Changelog
+
+1. Package section builded.
+2. Mobile Responsive
+3. Footer builded.

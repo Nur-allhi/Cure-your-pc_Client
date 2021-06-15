@@ -1,16 +1,17 @@
-.reason-cards {
+.packages-card {
   display: flex;
   justify-content: space-around;
   margin: 30px 50px;
 }
+
 @media (max-width: 768px) {
-  .reason-cards {
+  .packages-card {
     flex-direction: column;
   }
 }
 /* I phone X */
 @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
-  .reason-cards {
+  .packages-card {
     flex-direction: column;
     position: relative;
     right: 10px;
@@ -18,7 +19,7 @@
 }
 
 @media only screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) {
-  .reason-cards {
+  .packages-card {
     flex-direction: column;
     /* margin: 20 auto; */
     position: relative;
@@ -27,7 +28,7 @@
 }
 /* H400 */
 @media (max-width: 360px) {
-  .reason-cards {
+  .packages-card {
     flex-direction: column;
     /* margin: 20 auto; */
     position: relative;

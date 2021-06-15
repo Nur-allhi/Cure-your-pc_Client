@@ -8,6 +8,34 @@
 @media (max-width: 768px) {
   .service-cards {
     flex-direction: column;
+    margin: 20 auto;
+  }
+}
+
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .service-cards {
+    flex-direction: column;
     /* margin: 20 auto; */
+    position: relative;
+    right: 10px;
+  }
+}
+
+@media only screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) {
+  .service-cards {
+    flex-direction: column;
+    /* margin: 20 auto; */
+    position: relative;
+    right: 10px;
+  }
+}
+
+/* H400 */
+@media (max-width: 360px) {
+  .service-cards {
+    flex-direction: column;
+    /* margin: 20 auto; */
+    position: relative;
+    right: 18px;
   }
 }

@@ -1,0 +1,27 @@
+.package-add {
+  text-align: center;
+  width: 600px;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: rgba(114, 109, 109, 0.35) 0px 5px 15px;
+}
+.package-add h4 {
+  font-weight: 700;
+}
+.package-add input {
+  padding: 10px;
+  width: 300px;
+  height: 35px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 10px;
+}
+.package-add button {
+  margin-top: 10px;
+  width: 150px;
+  height: 30px;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  background-color: red;
+}

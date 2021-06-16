@@ -33,3 +33,14 @@
 #### Changelog
 
 1. Reviews Added.
+
+## Version 0.5
+
+#### Changelog
+
+1. Dashboard added.
+2. Addmin email can be add.
+3. order list is added.
+4. Admin panel secured.
+5. navbar signout option added.
+6. to order user have to login first.

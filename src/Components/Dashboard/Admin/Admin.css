@@ -1,0 +1,5 @@
+.add-staffs {
+  margin: 20px 80px;
+  display: flex;
+  justify-content: space-around;
+}

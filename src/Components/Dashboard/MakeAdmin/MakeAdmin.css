@@ -1,0 +1,29 @@
+.add-admin {
+  padding: 10px;
+  text-align: center;
+  border: none;
+  width: 400px;
+  height: 200px;
+  border-radius: 20px;
+  box-shadow: rgba(114, 109, 109, 0.35) 0px 5px 15px;
+}
+.add-admin h4 {
+  font-weight: 700;
+}
+.add-admin input {
+  margin-top: 25px;
+  height: 50px;
+  width: 300px;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+.add-admin button {
+  width: 130px;
+  height: 30px;
+  border: none;
+  margin-top: 30px;
+  color: white;
+  background-color: red;
+  border-radius: 10px;
+}

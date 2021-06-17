@@ -11,7 +11,7 @@ const Reviewcard = ({ review }) => {
         </div>
         <div>
           <span className="review-card-name">{review.name}</span> <br />
-          <span>{review.opinion}</span>
+          <span>{review.review}</span>
         </div>
       </div>
     </div>

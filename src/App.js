@@ -8,11 +8,12 @@ import NavBar from "./Components/Shared/NavBar/NavBar";
 import Orders from "./Components/Dashboard/Orders/Orders";
 import Admin from "./Components/Dashboard/Admin/Admin";
 import PrivateRoute from "./Components/Login/PrivateRoute";
+import AddTestimonials from "./Components/Dashboard/AddTestimonials/AddTestimonials";
 
 export const userData = createContext();
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
-  const [admin, setAdmin] = useState({});
+  const [admin, setAdmin] = useState([]);
 
   return (
     <div className="App">
@@ -25,12 +26,15 @@ function App() {
         <Router>
           <NavBar />
           <Switch>
-            <Route path="/dashboard/orders">
+            <PrivateRoute path="/dashboard/orders">
               <Orders />
-            </Route>
-            <PrivateRoute path="/dashboard/admin">
-              <Admin />
             </PrivateRoute>
+            <PrivateRoute path="/dashboard/addtestimonials">
+              <AddTestimonials />
+            </PrivateRoute>
+            <Route path="/dashboard/admin">
+              <Admin />
+            </Route>
             <Route path="/login">
               <Login />
             </Route>

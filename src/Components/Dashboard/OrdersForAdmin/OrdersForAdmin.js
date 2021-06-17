@@ -1,29 +1,41 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./OrdersForAdmin.css";
 import { Table } from "react-bootstrap";
+import { userData } from "../../../App";
 
 const OrdersForAdmin = () => {
+  const { forLoggedInUser } = useContext(userData);
+  const [loggedInUser] = forLoggedInUser;
   const [orderForAdmin, setOrderForAdmin] = useState([]);
   const [statusUpdate, setStatusUpdate] = useState({});
 
   useEffect(() => {
-    fetch("http://localhost:5000/adminPanleorderList")
+    fetch(
+      "http://localhost:5000/adminPanleorderList?email=" + loggedInUser.email,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          authorization: `Bearer ${sessionStorage.getItem("token")}`,
+        },
+      }
+    )
       .then((res) => res.json())
       .then((data) => setOrderForAdmin(data));
-  }, []);
+  }, [loggedInUser.email]);
 
   // Update the Status
-
   const handleChange = (event) => {
     const updateStatus = event.target.value;
     setStatusUpdate(updateStatus);
   };
+
   const handleStatusUpdate = (id) => {
     fetch(`http://localhost:5000/updateStatus/${id}`, {
       method: "PATCH",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify(statusUpdate),
-    }).then((res) => console.log("Response Client", res));
+      body: JSON.stringify({ statusUpdate }),
+    });
   };
 
   return (
@@ -49,22 +61,12 @@ const OrdersForAdmin = () => {
                 <input
                   type="text"
                   onBlur={handleChange}
-                  value={tData.orderStatus}
+                  defaultValue={tData.orderStatus}
                 />{" "}
                 <button onClick={() => handleStatusUpdate(`${tData._id}`)}>
                   Update
                 </button>
               </td>
-              {/* <td>
-                <select>
-                  <option onBlur={handleChange} value="Working">
-                    Working
-                  </option>
-                  <option onBlur={handleChange} value="Done">
-                    Done
-                  </option>
-                </select>
-              </td> */}
             </tr>
           ))}
         </tbody>

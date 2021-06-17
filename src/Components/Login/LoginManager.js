@@ -21,6 +21,7 @@ export const newAccountCreate = (name, email, password) => {
       newUserInfo.error = "";
       newUserInfo.success = true;
       updateUserName(name);
+      setUserToken();
       return newUserInfo;
     })
     .catch((error) => {
@@ -37,10 +38,13 @@ export const oldUserSignIn = (email, password) => {
     .auth()
     .signInWithEmailAndPassword(email, password)
     .then((res) => {
-      const newUserInfo = res.user;
-      newUserInfo.error = "";
-      newUserInfo.success = true;
-      return newUserInfo;
+      const { displayName, email } = res.user;
+      const signedInUser = {
+        displayName: displayName,
+        email: email,
+      };
+      setUserToken();
+      return signedInUser;
     })
     .catch((error) => {
       const newUserInfo = {};
@@ -60,12 +64,9 @@ export const handlegoogleSignIn = () => {
 
       const { displayName, email } = result.user;
       const signedInUser = {
-        isSignedIn: true,
-        success: true,
-        name: displayName,
+        displayName: displayName,
         email: email,
       };
-      // This gives you a Google Access Token. You can use it to access the Google API.
       setUserToken();
       return signedInUser;
     })
@@ -82,33 +83,8 @@ const setUserToken = () => {
     .then(function (idToken) {
       sessionStorage.setItem("token", idToken);
     })
-    .catch(function (error) {
-      // Handle error
-    });
+    .catch(function (error) {});
 };
-
-// FaceBook sign in:
-// export const handlefaceBookSignIn = () => {
-//   var fbProvider = new firebase.auth.FacebookAuthProvider();
-//   return firebase
-//     .auth()
-//     .signInWithPopup(fbProvider)
-//     .then((result) => {
-//       /** @type {firebase.auth.OAuthCredential} */
-//       var user = result.user;
-//       user.success = true;
-//       console.log(user);
-//       return user;
-//       // This gives you a Google Access Token. You can use it to access the Google API.
-//       // const credential = result.credential;
-//       // const token = credential.accessToken;
-//       // console.log({ token });
-//       // return signedInUser;
-//     })
-//     .catch((error) => {
-//       console.log(error);
-//     });
-// };
 
 // Update user name:
 const updateUserName = (name) => {

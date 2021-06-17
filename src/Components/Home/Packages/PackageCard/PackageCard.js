@@ -6,8 +6,9 @@ import { useHistory } from "react-router-dom";
 const PackageCard = ({ ourPackage }) => {
   const { forLoggedInUser } = useContext(userData);
   const [loggedInUser] = forLoggedInUser;
-  // const [loggedInUser] = useContext(userData);
+
   const history = useHistory();
+
   const handleClickOrder = () => {
     const data = {
       personEmail: loggedInUser.email,
@@ -15,9 +16,7 @@ const PackageCard = ({ ourPackage }) => {
       price: ourPackage.price,
       orderStatus: "Received",
     };
-    console.log("Before If Condition", loggedInUser.email);
     if (loggedInUser.email) {
-      console.log("If er vitor", loggedInUser.email);
       fetch("http://localhost:5000/placeorder", {
         method: "POST",
         headers: { "Content-Type": "application/json" },

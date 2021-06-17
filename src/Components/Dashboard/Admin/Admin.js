@@ -6,9 +6,16 @@ import { userData } from "./../../../App";
 import OrdersForAdmin from "./../OrdersForAdmin/OrdersForAdmin";
 
 const Admin = () => {
-  const { forAdmin } = useContext(userData);
+  const { forLoggedInUser, forAdmin } = useContext(userData);
+  const [loggedInUser] = forLoggedInUser;
+  const [admin, setAdmin] = forAdmin;
 
-  const [admin] = forAdmin;
+  fetch("http://localhost:5000/isAdmin?email=" + loggedInUser.email)
+    .then((res) => res.json())
+    .then((data) => {
+      setAdmin(data);
+    });
+
   return (
     <div className="admin-page">
       {admin ? (

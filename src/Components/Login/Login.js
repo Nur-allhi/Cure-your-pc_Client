@@ -92,8 +92,8 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className="login-container">
+      <form className="login-form" onSubmit={handleSubmit}>
         <h5>{loggedInUser ? loggedInUser.displayName : loggedInUser.name}</h5>
         {newUser && (
           <div>
@@ -128,17 +128,28 @@ const Login = () => {
         {newUser ? (
           <p>
             Already have an Account?
-            <span onClick={() => setNewUser(!newUser)}> Login here</span>{" "}
+            <span
+              className="auth-alternative"
+              onClick={() => setNewUser(!newUser)}
+            >
+              {" "}
+              Login here.
+            </span>{" "}
           </p>
         ) : (
           <p>
             Dont have account?
-            <span onClick={() => setNewUser(!newUser)}> Sign up here</span>
+            <span
+              className="auth-alternative"
+              onClick={() => setNewUser(!newUser)}
+            >
+              {" "}
+              Sign up here.
+            </span>
           </p>
         )}
         <button onClick={googleSignIn}>Continue With Google</button>
       </form>
-      {/* <img className="google-Icon" src={googleIcon} alt="" /> */}
     </div>
   );
 };

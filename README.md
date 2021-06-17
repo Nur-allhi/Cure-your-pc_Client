@@ -53,3 +53,10 @@
 2. Photos Optimized.
 3. SignOut to redirect to home.
 4. Color theme change.
+
+## Version 0.7
+
+#### Changelog
+
+1. Review option added.
+2. Login form designed.

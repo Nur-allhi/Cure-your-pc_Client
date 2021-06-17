@@ -6,28 +6,31 @@ import { useState } from "react";
 import Login from "./Components/Login/Login";
 import NavBar from "./Components/Shared/NavBar/NavBar";
 import Orders from "./Components/Dashboard/Orders/Orders";
-
 import Admin from "./Components/Dashboard/Admin/Admin";
+import PrivateRoute from "./Components/Login/PrivateRoute";
 
 export const userData = createContext();
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
+  const [admin, setAdmin] = useState({});
 
   return (
     <div className="App">
-      <userData.Provider value={[loggedInUser, setLoggedInUser]}>
+      <userData.Provider
+        value={{
+          forLoggedInUser: [loggedInUser, setLoggedInUser],
+          forAdmin: [admin, setAdmin],
+        }}
+      >
         <Router>
           <NavBar />
           <Switch>
-            {/* <Route path="/dashboard">
-              
-            </Route> */}
             <Route path="/dashboard/orders">
               <Orders />
             </Route>
-            <Route path="/dashboard/admin">
+            <PrivateRoute path="/dashboard/admin">
               <Admin />
-            </Route>
+            </PrivateRoute>
             <Route path="/login">
               <Login />
             </Route>

@@ -14,7 +14,6 @@ const AddPackageCard = () => {
   } = useForm();
 
   const handleImageUpload = (event) => {
-    console.log(event.target.files[0]);
     const imageData = new FormData();
     imageData.set("key", "cea9da290a58ca8c40076a3b0c37947d");
     imageData.append("image", event.target.files[0]);

@@ -3,8 +3,9 @@
   text-align: center;
   border: none;
   width: 400px;
-  height: 200px;
+  height: 400px;
   border-radius: 20px;
+  background-color: #faf6f6;
   box-shadow: rgba(114, 109, 109, 0.35) 0px 5px 15px;
 }
 .add-admin h4 {

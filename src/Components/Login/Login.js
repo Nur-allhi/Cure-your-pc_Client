@@ -17,7 +17,11 @@ const Login = () => {
   let location = useLocation();
 
   let { from } = location.state || { from: { pathname: "/" } };
-  const [loggedInUser, setLoggedInUser] = useContext(userData);
+
+  const { forLoggedInUser } = useContext(userData);
+  const [loggedInUser, setLoggedInUser] = forLoggedInUser;
+
+  // const [loggedInUser, setLoggedInUser] = useContext(userData);
 
   const [newUser, setNewUser] = useState(false);
 

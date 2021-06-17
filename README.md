@@ -44,3 +44,12 @@
 4. Admin panel secured.
 5. navbar signout option added.
 6. to order user have to login first.
+
+## Version 0.6
+
+#### Changelog
+
+1. Nav bar admin check.
+2. Photos Optimized.
+3. SignOut to redirect to home.
+4. Color theme change.

@@ -5,14 +5,14 @@ import { userData } from "../../../App";
 import "./Orders.css";
 
 const Orders = () => {
-  const [loggedInUser, setLoggedInUser] = useContext(userData);
+  const { forLoggedInUser } = useContext(userData);
+  const [loggedInUser] = forLoggedInUser;
   const [orders, setOrders] = useState([]);
   useEffect(() => {
     fetch("http://localhost:5000/orders?email=" + loggedInUser.email)
       .then((res) => res.json())
       .then((data) => setOrders(data));
-  }, []);
-
+  }, [loggedInUser.email]);
   return (
     <Table responsive striped bordered hover size="sm">
       <thead>

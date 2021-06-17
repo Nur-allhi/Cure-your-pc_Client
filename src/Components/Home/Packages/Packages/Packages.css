@@ -21,7 +21,6 @@
 @media only screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) {
   .packages-card {
     flex-direction: column;
-    /* margin: 20 auto; */
     position: relative;
     right: 10px;
   }
@@ -30,7 +29,6 @@
 @media (max-width: 360px) {
   .packages-card {
     flex-direction: column;
-    /* margin: 20 auto; */
     position: relative;
     right: 18px;
   }

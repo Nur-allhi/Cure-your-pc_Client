@@ -60,3 +60,10 @@
 
 1. Review option added.
 2. Login form designed.
+
+## Version 0.8
+
+#### Changelog
+
+1. Admin varification Added.
+2. added some other packages.

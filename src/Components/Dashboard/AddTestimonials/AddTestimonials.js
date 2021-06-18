@@ -15,9 +15,7 @@ const AddTestimonials = () => {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(customerReview),
-    }).then((res) => {
-      console.log("added bhai darna mat", res);
-    });
+    }).then(alert("Your review is added to the Our App"));
   };
 
   return (
@@ -31,10 +29,6 @@ const AddTestimonials = () => {
           placeholder="Your review"
           className="review-area"
         ></textarea>
-        {/* <input
-          placeholder="Your review about service"
-          {...register("review")}
-        /> */}
         <br />
         <button type="submit">Add review</button>
       </form>

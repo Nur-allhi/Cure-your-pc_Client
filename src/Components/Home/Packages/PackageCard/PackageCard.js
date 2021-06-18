@@ -33,7 +33,7 @@ const PackageCard = ({ ourPackage }) => {
         <div className="card-upper-bg">
           <img src={ourPackage.imageUrl} alt="" /> <br />
           <span className="card-title">{ourPackage.name}</span>
-          <p className="card-desription">{ourPackage.description}</p>
+          <br />
           <button className="package-button" onClick={() => handleClickOrder()}>
             Order Now
           </button>

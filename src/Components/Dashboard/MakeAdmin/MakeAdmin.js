@@ -12,11 +12,7 @@ const MakeAdmin = () => {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email: email }),
-      //   body: email,
-    })
-      .then((res) => res.json)
-      .then((fetchData) => console.log(fetchData));
-    console.log(email);
+    }).then(alert("Admin email added."));
   };
 
   return (

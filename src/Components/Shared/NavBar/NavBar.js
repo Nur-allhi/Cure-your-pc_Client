@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./NavBar.css";
 import { Navbar } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
@@ -7,10 +7,9 @@ import { useContext } from "react";
 import { userData } from "../../../App";
 
 const NavBar = () => {
-  const { forLoggedInUser, forAdmin } = useContext(userData);
+  const { forLoggedInUser } = useContext(userData);
   const [loggedInUser, setLoggedInUser] = forLoggedInUser;
   const { email, displayName } = loggedInUser;
-  const [admin] = forAdmin;
 
   const history = useHistory();
 
@@ -18,6 +17,7 @@ const NavBar = () => {
     setLoggedInUser("");
     history.push("/");
   };
+
   return (
     <Navbar bg="white" collapseOnSelect expand="lg">
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -37,15 +37,13 @@ const NavBar = () => {
         <Link to="/dashboard/addtestimonials">
           <li>Review</li>
         </Link>
-
-        {admin ? (
+        {email ? (
           <Link to="/dashboard/admin">
             <li>Admin</li>
           </Link>
         ) : (
           " "
         )}
-
         {email ? <li>{displayName}</li> : ""}
 
         {email ? (

@@ -31,7 +31,6 @@ const AddPackageCard = () => {
     const newPackage = {
       name: data.title,
       price: data.price,
-      description: data.description,
       catagory: data.catagory,
       imageUrl: imageUrl,
     };
@@ -39,7 +38,7 @@ const AddPackageCard = () => {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newPackage),
-    }).then((res) => console.log("Added", res));
+    }).then(alert("Package is added to the Home page."));
   };
 
   return (
@@ -53,8 +52,6 @@ const AddPackageCard = () => {
         {errors.title && <span>Title is required</span>} <br />
         <input placeholder="price" {...register("price", { required: true })} />
         {errors.price && <span>Price is required</span>}
-        <br />
-        <input placeholder="Service Description" {...register("description")} />
         <br />
         <input placeholder="Catagory" {...register("catagory")} />
         <br />

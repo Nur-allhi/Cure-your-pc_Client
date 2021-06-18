@@ -1,20 +1,24 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import MakeAdmin from "./../MakeAdmin/MakeAdmin";
 import AddPackageCard from "./../AddPackage/AddPackageCard";
 import "./Admin.css";
 import { userData } from "./../../../App";
 import OrdersForAdmin from "./../OrdersForAdmin/OrdersForAdmin";
+import axios from "axios";
 
 const Admin = () => {
-  const { forLoggedInUser, forAdmin } = useContext(userData);
+  const { forAdmin, forLoggedInUser } = useContext(userData);
   const [loggedInUser] = forLoggedInUser;
   const [admin, setAdmin] = forAdmin;
 
-  fetch("http://localhost:5000/isAdmin?email=" + loggedInUser.email)
-    .then((res) => res.json())
-    .then((data) => {
-      setAdmin(data);
-    });
+  useEffect(() => {
+    axios
+      .get(`http://localhost:5000/isAdmin?email=${loggedInUser?.email}`)
+      .then((res) => {
+        setAdmin(res.data);
+        console.log(res.data);
+      });
+  }, []);
 
   return (
     <div className="admin-page">
@@ -27,7 +31,10 @@ const Admin = () => {
           <OrdersForAdmin />
         </>
       ) : (
-        <h1>You are not allowed to enter this page</h1>
+        <h1 style={{ textAlign: "center", color: "red" }}>
+          You are not allowed to access this page. <br />
+          This one is for admin Only.
+        </h1>
       )}
     </div>
   );

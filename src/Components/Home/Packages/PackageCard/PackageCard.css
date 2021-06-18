@@ -1,15 +1,15 @@
 .package-card {
   display: flex;
   justify-content: center;
-  width: 250px;
+  width: 330px;
   padding: 10px;
   flex-wrap: wrap;
   text-align: center;
   border-radius: 15px;
-  background-color: rgb(240, 230, 230);
+  background-color: rgb(255, 255, 255);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .package-card img {
   height: 200px;

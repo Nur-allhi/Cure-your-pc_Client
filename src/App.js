@@ -9,11 +9,13 @@ import Orders from "./Components/Dashboard/Orders/Orders";
 import Admin from "./Components/Dashboard/Admin/Admin";
 import PrivateRoute from "./Components/Login/PrivateRoute";
 import AddTestimonials from "./Components/Dashboard/AddTestimonials/AddTestimonials";
+import NotFound from "./Components/NotFound/NotFound";
 
 export const userData = createContext();
+
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
-  const [admin, setAdmin] = useState([]);
+  const [admin, setAdmin] = useState(false);
 
   return (
     <div className="App">
@@ -32,14 +34,17 @@ function App() {
             <PrivateRoute path="/dashboard/addtestimonials">
               <AddTestimonials />
             </PrivateRoute>
-            <Route path="/dashboard/admin">
+            <PrivateRoute path="/dashboard/admin">
               <Admin />
-            </Route>
+            </PrivateRoute>
             <Route path="/login">
               <Login />
             </Route>
             <Route exact path="/">
               <HomeMain />
+            </Route>
+            <Route path="*">
+              <NotFound />
             </Route>
           </Switch>
         </Router>

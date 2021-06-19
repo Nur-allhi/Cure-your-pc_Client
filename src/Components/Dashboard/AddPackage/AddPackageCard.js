@@ -34,7 +34,7 @@ const AddPackageCard = () => {
       catagory: data.catagory,
       imageUrl: imageUrl,
     };
-    fetch("http://localhost:5000/addPackage", {
+    fetch("https://cureyourpc.herokuapp.com/addPackage", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newPackage),

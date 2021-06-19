@@ -10,8 +10,8 @@ const AddTestimonials = () => {
       name: data.customerName,
       review: data.review,
     };
-    console.log(customerReview);
-    fetch("http://localhost:5000/addReview", {
+
+    fetch("https://cureyourpc.herokuapp.com/addReview", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(customerReview),

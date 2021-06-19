@@ -19,7 +19,7 @@ const NavBar = () => {
   };
 
   return (
-    <Navbar bg="white" collapseOnSelect expand="lg">
+    <Navbar collapseOnSelect expand="lg">
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Brand className="navBar-logo">
         <img src={logo} alt="" />

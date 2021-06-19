@@ -13,10 +13,11 @@ const Admin = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/isAdmin?email=${loggedInUser?.email}`)
+      .get(
+        `https://cureyourpc.herokuapp.com/isAdmin?email=${loggedInUser?.email}`
+      )
       .then((res) => {
         setAdmin(res.data);
-        console.log(res.data);
       });
   }, []);
 

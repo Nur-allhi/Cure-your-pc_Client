@@ -94,10 +94,7 @@ const updateUserName = (name) => {
     .updateProfile({
       displayName: name,
     })
-    .then(function () {
-      // Update successful.
-      console.log("user Name updated successfully");
-    })
+    .then(function () {})
     .catch(function (error) {
       console.log(error);
     });

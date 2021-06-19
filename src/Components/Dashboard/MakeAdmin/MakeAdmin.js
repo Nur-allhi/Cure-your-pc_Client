@@ -8,7 +8,7 @@ const MakeAdmin = () => {
   };
 
   const handleSubmitEmail = () => {
-    fetch("http://localhost:5000/addAdmin", {
+    fetch("https://cureyourpc.herokuapp.com/addAdmin", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email: email }),

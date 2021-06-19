@@ -1,6 +1,21 @@
+[Live site](https://cure-your-pc.web.app/)
+[Server reoo](https://github.com/Porgramming-Hero-web-course/complete-website-server-Nur-allhi)
+
+![Screenshot](Home-page.png)
+
 # Cure Your Pc
 
 #### One stop Solution for your Computer.
+
+### Key Feature:
+
+- You can find here our repair packages.
+- Your can order specific services.
+- You can see your order list
+- You will see your order status (Which admin can edit)
+- Role based admin panel.
+- Admin can add services , edit customer orders.
+  Many More.
 
 ## Version 0.1
 
@@ -67,3 +82,7 @@
 
 1. Admin varification Added.
 2. added some other packages.
+
+## Version 0.9
+
+Deploying to hosting site.

@@ -71,7 +71,6 @@ const Login = () => {
       // Create user:
       newAccountCreate(user.name, user.email, user.password).then((res) => {
         handleResponse(res, true);
-        console.log("user Created SuccessFully");
       });
     }
 
@@ -79,7 +78,6 @@ const Login = () => {
       // Old user:
       oldUserSignIn(user.email, user.password).then((res) => {
         handleResponse(res, true);
-        console.log("SuccessFully login with id pass");
       });
     }
     e.preventDefault();

@@ -17,7 +17,7 @@ const PackageCard = ({ ourPackage }) => {
       orderStatus: "Received",
     };
     if (loggedInUser.email) {
-      fetch("http://localhost:5000/placeorder", {
+      fetch("https://cureyourpc.herokuapp.com/placeorder", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),

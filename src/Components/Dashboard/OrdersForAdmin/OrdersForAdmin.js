@@ -11,7 +11,8 @@ const OrdersForAdmin = () => {
 
   useEffect(() => {
     fetch(
-      "http://localhost:5000/adminPanleorderList?email=" + loggedInUser.email,
+      "https://cureyourpc.herokuapp.com/adminPanleorderList?email=" +
+        loggedInUser.email,
       {
         method: "GET",
         headers: {
@@ -31,7 +32,7 @@ const OrdersForAdmin = () => {
   };
 
   const handleStatusUpdate = (id) => {
-    fetch(`http://localhost:5000/updateStatus/${id}`, {
+    fetch(`https://cureyourpc.herokuapp.com/updateStatus/${id}`, {
       method: "PATCH",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ statusUpdate }),

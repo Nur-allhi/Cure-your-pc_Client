@@ -9,13 +9,16 @@ const Orders = () => {
   const [loggedInUser] = forLoggedInUser;
   const [orders, setOrders] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/orders?email=" + loggedInUser.email, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        authorization: `Bearer ${sessionStorage.getItem("token")}`,
-      },
-    })
+    fetch(
+      "https://cureyourpc.herokuapp.com/orders?email=" + loggedInUser.email,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          authorization: `Bearer ${sessionStorage.getItem("token")}`,
+        },
+      }
+    )
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [loggedInUser.email]);

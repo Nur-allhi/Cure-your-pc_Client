@@ -6,7 +6,7 @@ import "./Packages.css";
 const Package = () => {
   const [packages, setPackages] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/packages")
+    fetch("https://cureyourpc.herokuapp.com/packages")
       .then((res) => res.json())
       .then((data) => setPackages(data));
   }, []);
@@ -19,6 +19,7 @@ const Package = () => {
           services page.
         </p>
       </div>
+
       <div className="packages-card">
         {packages.map((data) => (
           <PackageCard key={data._id} ourPackage={data}></PackageCard>

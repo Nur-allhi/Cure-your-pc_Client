@@ -1,5 +1,7 @@
-[Live site](https://cure-your-pc.web.app/)
-[Server reoo](https://github.com/Porgramming-Hero-web-course/complete-website-server-Nur-allhi)
+###[Live site](https://cure-your-pc.web.app/) 
+
+
+###[Server reoo](https://github.com/Porgramming-Hero-web-course/complete-website-server-Nur-allhi)
 
 ![Screenshot](Home-page.png)
 
